@@ -92,4 +92,17 @@ public class LogAnalyzer
         }
         return busiestHour;
     }
+    
+    /**
+     * Returns the least busy hour.
+     */
+    public int quietestHour(){
+        int quietestHour = 0;
+        for(int hour = 0; hour < hourCounts.length; hour++){
+            if (hourCounts[quietestHour] > hourCounts[hour]){
+                quietestHour = hour;
+            }
+        }
+        return quietestHour;
+    }
 }
